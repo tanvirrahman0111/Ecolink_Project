@@ -1,283 +1,46 @@
-## Academic Information
-
-**Department:** Department of Computer Science & Engineering  
-**University:** University of Information Technology and Sciences  
-**Course:** CSE 416 – Software Project Design and Development  
-**Semester:** Autumn 2026  
-**Section:** 7B1
-
-## Team Member
-
-- Name: Md. Tanvir Rahman
-- Id: 0432320005101116
-- Name: Faisal Ahmed
-- Id:0432320005101129
-- Name: Md. Sayed
-- Id:0432320005101148
-
-## Instructor
-- Dr. Mahfida Amjad Dipa
-- Assistant Professor, Department of CSE
-
-
 # EcoLink – Smart Surplus Resource Optimization & Redistribution Platform
 
-> A web-based platform for intelligent redistribution of surplus resources through category-specific priority matching, end-to-end donation lifecycle tracking, and measurable social and environmental impact.
+**Course:** CSE 416 – Software Project Design and Development | Autumn 2026 | Section 7B1
+**University:** UITS, Department of Computer Science & Engineering
+**Instructor:** Dr. Mahfida Amjad Dipa
 
-## Project Overview
+**Team:**
+- Md. Tanvir Rahman — 0432320005101116
+- Faisal Ahmed — 0432320005101129
+- Md. Sayed — 0432320005101148
 
-EcoLink is designed to address the problem of usable surplus resources being wasted because donors and receivers are not efficiently connected. The platform brings multiple resource categories into one centralized system and replaces simple manual post-and-claim processes with an intelligent donor–receiver matching mechanism.
+**Repository:** `<paste your GitHub repo link here>`
 
-The supported resource categories are:
+---
 
-- Food
-- Clothes
-- Books
-- Electronics
-- Furniture
+## Overview
+EcoLink is a web-based platform that unifies five surplus-resource categories — Food, Clothes, Books, Electronics, Furniture — on one system, and replaces manual "post-and-claim" donation listings with an automated, **priority-based, category-weighted matching algorithm** between donors and verified receivers.
 
-The system is designed around three main roles:
+## Tech Stack
+HTML, CSS, JavaScript (frontend) · PHP + PDO (backend) · MySQL (database) · XAMPP/Apache (server)
 
-- **Donor** — uploads surplus resources and tracks donations.
-- **Receiver** — maintains resource needs, accepts matched donations, and manages pickup status.
-- **Admin** — verifies users, manages resources/categories, monitors activity, and reviews reports and analytics.
+## Feature Coverage (Implemented in this Scaffold)
 
-## Core Objectives
-
-1. Unify multiple surplus-resource categories on one platform.
-2. Implement a category-specific weighted priority matching algorithm.
-3. Automate donor–receiver pairing through an intelligent recommendation engine.
-4. Track the complete donation lifecycle.
-5. Measure social and environmental impact.
-6. Generate waste analytics and recommendations.
-7. Provide verification and moderation through an admin system.
-8. Improve trust, transparency, and accountability.
-
-## Donation Lifecycle
-
-```text
-Available → Matched → Accepted → Pickup → Delivered → Completed
-```
-
-The lifecycle allows both donors and receivers to see the progress of a donation from resource upload through final completion.
-
-## Main Features
-
-### Donor Features
-
-- Account creation and login
-- Upload surplus resources
-- Select resource category
-- Enter quantity and condition
-- Track donation status
-- View donation history
-
-### Receiver Features
-
-- Accept or claim matched donations
-- View and update pickup status
-- Maintain a demand profile for better matching
-
-### Admin Features
-
-- Verify donors and receivers
-- Manage users and resource categories
-- View reports and waste analytics
-- Monitor the impact dashboard
-
-### Advanced Platform Features
-
-- Priority-based matching algorithm
-- End-to-end donation lifecycle tracking
-- Impact dashboard
-- Waste analytics
-- Notification and reminder system
-- Admin verification and moderation
-
-## Matching Algorithm
-
-The core innovation of EcoLink is a **category-specific weighted Priority Matching Algorithm**. The proposal describes matching as an intelligent replacement for manual donor–receiver pairing. Matching can consider relevant category-specific factors such as resource information, receiver need, distance, expiry where applicable, demand, and receiver capacity.
-
-The exact weighting and scoring implementation should follow the final system design and database structure.
-
-## Impact Dashboard
-
-EcoLink is intended to make the impact of redistribution measurable. The proposal identifies key impact measures including:
-
-- Beneficiaries reached
-- Resources reused
-- CO2 emissions saved
-- Waste-related analytics
-
-## Technology Stack
-
-| Layer | Technology |
+| Module | Status |
 |---|---|
-| Frontend | HTML, CSS, JavaScript |
-| Backend | PHP |
-| Database | MySQL |
-| Image / Cloud Storage | Firebase / cloud storage |
-| Server | XAMPP / Apache |
-| Development Tools | VS Code, phpMyAdmin |
+| Database schema (users, donations, demand profiles, matches, lifecycle log, notifications, impact log) | ✅ Done |
+| Donor: register, login, upload resource, track donations, advance lifecycle | ✅ Done |
+| Receiver: register, demand profile per category, view matches, accept/decline/confirm | ✅ Done |
+| **Priority Matching Algorithm** — scores receivers on Urgency, Distance, Demand-fit, Capacity with category-specific weights | ✅ Done |
+| Donation lifecycle tracking (Available → Matched → Accepted → Pickup → Delivered → Completed) | ✅ Done |
+| Admin: verify users, set capacity scores, tune matching weights, run matching engine | ✅ Done |
+| Impact dashboard (CO₂ saved, resources reused, beneficiaries reached, lifecycle funnel) | ✅ Done |
+| Notification system | ✅ Done |
+| Payment gateway, native mobile app | ⏳ Out of scope (per proposal) |
 
-## System Scope
-
-### In Scope
-
-- Web-based donor and receiver platform
-- Five resource categories
-- Priority-based donor–receiver matching
-- Full donation lifecycle tracking
-- Impact dashboard and waste analytics
-- Admin verification and moderation
-- Notification and reminder system
-
-### Out of Scope for the First Release
-
-- Physical logistics and last-mile delivery by the platform
-- Online payment gateway integration
-- Native mobile application
-- Additional language support beyond the stated first-release scope
-
-Physical pickup/delivery remains the responsibility of the donor, receiver, or partner NGO rather than a built-in logistics operation.
-
-## System Modules
-
-```text
-EcoLink
-│
-├── Authentication
-│   ├── Donor Login / Registration
-│   ├── Receiver Login / Registration
-│   └── Admin Access
-│
-├── Donor Module
-│   ├── Dashboard
-│   ├── Add Resource
-│   ├── Smart Matching
-│   ├── Donation Tracking
-│   └── Donation History
-│
-├── Receiver Module
-│   ├── Dashboard
-│   ├── Demand / Request Management
-│   ├── Matched Resources
-│   ├── Pickup Status
-│   └── Request History
-│
-├── Matching Engine
-│   └── Category-Specific Priority Matching
-│
-├── Lifecycle Tracking
-│   └── Available → Matched → Accepted → Pickup → Delivered → Completed
-│
-├── Impact & Analytics
-│   ├── Impact Dashboard
-│   └── Waste Analytics
-│
-├── Notifications
-│   └── Alerts and Reminders
-│
-└── Admin Panel
-    ├── User Verification
-    ├── Resource / Category Management
-    ├── Moderation
-    ├── Reports
-    └── Monitoring
+## Matching Algorithm (Core Contribution)
 ```
+total_score = w_urgency·urgency + w_distance·distance + w_demand·demand + w_capacity·capacity
+```
+Each sub-score is normalized to 0–100; weights are stored per category in the database and are admin-tunable.
 
-## Development Plan
-
-The proposal organizes development into four major phases:
-
-### Phase 1 — System Design
-
-- Requirement analysis
-- Database design and ER diagram
-
-### Phase 2 — Core Development
-
-- User authentication system
-- Donor, receiver, and admin dashboards
-- Resource category management
-- Priority matching algorithm
-
-### Phase 3 — Advanced Features
-
-- Donation lifecycle tracking
-- Notification system
-- Impact dashboard and waste analytics
-- Admin panel and verification
-
-### Phase 4 — Testing & Deployment
-
-- System testing and bug fixing
-- Final deployment and documentation
-
-The proposal defines a **12-week development timeline** for these activities.
-
-## Installation / Local Development
-
-The proposal specifies a local development environment based on XAMPP, Apache, PHP, MySQL, VS Code, and phpMyAdmin.
-
-A typical local setup is:
-
-1. Install XAMPP.
-2. Start Apache and MySQL.
-3. Place the EcoLink project inside the XAMPP web directory.
-4. Create the project database using phpMyAdmin.
-5. Configure the PHP database connection.
-6. Configure Firebase/cloud storage for resource images if used.
-7. Run the project through the local Apache server.
-
-## Proposed Database Areas
-
-The final ER diagram should support the main entities required by the proposal, such as:
-
-- Users
-- Donors
-- Receivers
-- Admins
-- Resource Categories
-- Resources
-- Receiver Requests / Demand Profiles
-- Matches
-- Donations
-- Donation Status History
-- Notifications
-- Impact / Analytics records
-
-The exact table names, keys, relationships, and fields should follow the team's finalized ER diagram rather than being assumed from this README.
-
-## Project Strengths
-
-According to the proposal, EcoLink's main strengths are:
-
-- Multi-category resource redistribution
-- Smart category-specific priority matching
-- End-to-end donation lifecycle tracking
-- Measurable social and environmental impact
-
-## Known Constraints
-
-The proposal identifies several important limitations and risks:
-
-- The platform requires internet access and active participation.
-- Matching quality depends on accurate category-specific data.
-- Initial algorithm setup and tuning can be complex.
-- Fake donations or claims may create data-quality risks.
-- Adoption depends on having enough donors and receivers.
-
-## Future Scope
-
-The proposal identifies the following future opportunities:
-
-- Mobile application
-- AI-based demand forecasting
-- Route optimization for pickups
-- Integration with local NGOs
-- Integration with municipal waste-management bodies for city-wide redistribution
-
-## Conclusion
-
-EcoLink extends surplus-resource redistribution beyond food into a unified platform covering food, clothes, books, electronics, and furniture. Its central contribution is a category-specific weighted Priority Matching Algorithm that aims to replace manual post-and-claim processes with intelligent donor–receiver pairing. Combined with lifecycle tracking and impact analytics, the system is intended to make redistribution more measurable, efficient, transparent, and useful.
+## Local Setup
+1. Place project in XAMPP `htdocs`, start Apache + MySQL
+2. Import `sql/schema.sql` via phpMyAdmin
+3. Visit `setup_admin.php` once to create an admin, then delete that file
+4. Register a donor and a receiver to test the matching flow
