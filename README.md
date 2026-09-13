@@ -1,8 +1,8 @@
 # EcoLink – Smart Surplus Resource Optimization & Redistribution Platform
 
-**Course:** CSE 416 – Software Project Design and Development | Autumn 2026 | Section 7B1
-**University:** UITS, Department of Computer Science & Engineering
-**Instructor:** Dr. Mahfida Amjad Dipa
+**Course:** CSE 416 – Software Project Design and Development | Autumn 2026 | Section 7B1  
+**University:** UITS, Department of Computer Science & Engineering  
+**Instructor:** Dr. Mahfida Amjad Dipa  
 
 **Team:**
 - Md. Tanvir Rahman — 0432320005101116
