@@ -9,8 +9,6 @@
 - Faisal Ahmed — 0432320005101129
 - Md. Sayed — 0432320005101148
 
-**Repository:** `<paste your GitHub repo link here>`
-
 ---
 
 ## Overview
@@ -42,5 +40,4 @@ Each sub-score is normalized to 0–100; weights are stored per category in the 
 ## Local Setup
 1. Place project in XAMPP `htdocs`, start Apache + MySQL
 2. Import `sql/schema.sql` via phpMyAdmin
-3. Visit `setup_admin.php` once to create an admin, then delete that file
-4. Register a donor and a receiver to test the matching flow
+3. Register a donor and a receiver to test the matching flow
