@@ -3,7 +3,7 @@
 **Department:** Department of Computer Science & Engineering  
 **University:** University of Information Technology and Sciences  
 **Course:** CSE 416 – Software Project Design and Development  
-**Semester:** Autumn 2026
+**Semester:** Autumn 2026  
 **Section:** 7B1
 
 ## Team Member
