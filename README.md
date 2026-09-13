@@ -1,3 +1,19 @@
+## Academic Project Information
+
+**Department:** Department of Computer Science & Engineering  
+**University:** University of Information Technology and Sciences  
+**Course:** CSE 416 – Software Project Design and Development  
+**Semester:** Autumn 2026
+
+## Team
+
+- Md. Tanvir Rahman
+- Id:0432320005101116
+- Faisal Ahmed
+- Id:0432320005101129
+- Md. Sayed
+- Id:0432320005101148
+- 
 # EcoLink – Smart Surplus Resource Optimization & Redistribution Platform
 
 > A web-based platform for intelligent redistribution of surplus resources through category-specific priority matching, end-to-end donation lifecycle tracking, and measurable social and environmental impact.
@@ -255,22 +271,6 @@ The proposal identifies the following future opportunities:
 - Route optimization for pickups
 - Integration with local NGOs
 - Integration with municipal waste-management bodies for city-wide redistribution
-
-## Academic Project Information
-
-**Department:** Department of Computer Science & Engineering  
-**University:** University of Information Technology and Sciences  
-**Course:** CSE 416 – Software Project Design and Development  
-**Semester:** Autumn 2026
-
-## Team
-
-- Md. Tanvir Rahman
-- Id:0432320005101116
-- Faisal Ahmed
-- Id:0432320005101129
-- Md. Sayed
-- Id:0432320005101148
 
 ## Conclusion
 
