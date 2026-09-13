@@ -1,11 +1,12 @@
-## Academic Project Information
+## Academic Information
 
 **Department:** Department of Computer Science & Engineering  
 **University:** University of Information Technology and Sciences  
 **Course:** CSE 416 – Software Project Design and Development  
 **Semester:** Autumn 2026
+**Section:** 7B1
 
-## Team
+## Team Member
 
 - Md. Tanvir Rahman
 - Id:0432320005101116
@@ -13,7 +14,12 @@
 - Id:0432320005101129
 - Md. Sayed
 - Id:0432320005101148
-- 
+
+## Instructor
+- Dr. Mahfida Amjad Dipa
+- Assistant Professor, Department of CSE
+
+
 # EcoLink – Smart Surplus Resource Optimization & Redistribution Platform
 
 > A web-based platform for intelligent redistribution of surplus resources through category-specific priority matching, end-to-end donation lifecycle tracking, and measurable social and environmental impact.
