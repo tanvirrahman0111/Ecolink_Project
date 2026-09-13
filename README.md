@@ -8,11 +8,11 @@
 
 ## Team Member
 
-- Md. Tanvir Rahman
-- Id:0432320005101116
-- Faisal Ahmed
+- Name: Md. Tanvir Rahman
+- Id: 0432320005101116
+- Name: Faisal Ahmed
 - Id:0432320005101129
-- Md. Sayed
+- Name: Md. Sayed
 - Id:0432320005101148
 
 ## Instructor
